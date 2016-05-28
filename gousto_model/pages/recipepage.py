@@ -100,23 +100,6 @@ class RecipePage(BasePage):
         """
         self.driver.find_element(*Locators.REMOVE_BUTTON).click()
 
-    def show_info(self):
-        """
-
-        Opens the description of a recipe and checks for some basic info of a recipe is displayed properly
-
-        """
-        self.driver.find_element(*Locators.MAIN_RECIPE).click()
-        self.driver.find_element(*Locators.RECIPE_INFO).is_displayed()
-
-    def close_info(self):
-        """
-
-        Method to close the modal dialog of recipe box
-
-        """
-        self.driver.find_element(*Locators.BUTTON_CLOSE).click()
-
     def checkout(self):
         """
 
