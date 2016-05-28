@@ -1,0 +1,2 @@
+git+http://git.prod.skyscanner.local/testautomationservices/pscore.git
+#pscore>=0.0.0.4
