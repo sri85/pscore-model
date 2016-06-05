@@ -146,6 +146,9 @@ class RecipePage(BasePage):
         Allows user to increment the portions by clicking on the "Add 2 more portions" button.
 
         """
+        self.driver.wait.until_visible(Locators.ADD_MORE_RECIPES, timeout=10,
+                                       message='Add more button not visible')
+
         self.driver.find_element(*Locators.ADD_MORE_RECIPES).click()
 
     def verify_alert_message(self):
@@ -156,5 +159,3 @@ class RecipePage(BasePage):
 
         """
         return self.driver.find_element(*Locators.ERROR_ALERT).is_displayed()
-
-
